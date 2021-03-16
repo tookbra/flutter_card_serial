@@ -31,7 +31,6 @@ public class CardSerialWorker extends RxRs232SerialWorkerX<SendCommand, RecvComm
 
     @Override
     public DataReceiver<RecvCommand> newReceiver() {
-        System.out.println(1111111);
         return new CardDataReceiver();
     }
 

@@ -26,7 +26,7 @@ class FlutterCardPlugin {
   }
 
   static Future connect() async {
-    await _channel.invokeMethod('connect');
+    return await _channel.invokeMethod('connect');
   }
 
   static Future disconnect() async {

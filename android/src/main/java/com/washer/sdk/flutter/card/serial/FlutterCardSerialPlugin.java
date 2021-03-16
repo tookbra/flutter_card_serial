@@ -79,6 +79,7 @@ public class FlutterCardSerialPlugin implements FlutterPlugin, MethodCallHandler
       case "connect":
         try {
           SerialManager.get().initDevice();
+          result.success(true);
         } catch (Exception e) {
           e.printStackTrace();
           result.error(e.getMessage(), "", "");

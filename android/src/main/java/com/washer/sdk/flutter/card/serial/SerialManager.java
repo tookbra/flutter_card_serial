@@ -79,8 +79,10 @@ public class SerialManager {
 
 
     public void initDevice() throws Exception {
-        cardSerialWorker.setDevice(CARD_SERIAL, CARD_BAUD_RATE);
-        cardSerialWorker.openSerial();
+        if(!cardSerialWorker.isSerialOpened()) {
+            cardSerialWorker.setDevice(CARD_SERIAL, CARD_BAUD_RATE);
+            cardSerialWorker.openSerial();
+        }
     }
 
 
